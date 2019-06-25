@@ -29,7 +29,7 @@ for k,v in weights_from_torch.items():
     # total_num += p.numel()
 # print(total_num)  #45371666
 # f = open('k_layers_names.txt','w')
-k_model = k_model()
+k_model = k_model(shape=[6,None,None])
 for layer in k_model.layers:
     current_layer_name = layer.name
     if current_layer_name=='conv0':
